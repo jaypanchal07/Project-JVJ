@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -19,6 +20,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
 
     private EditText userEmail, userPassword;
     private Button btnLogin, btnRegister;
+    private TextView btnForgotPass;
 
     // TODO: 2020-03-16 Vako will implement the forgot password 
 
@@ -36,6 +38,9 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
 
         btnLogin.setOnClickListener(this);
         btnRegister.setOnClickListener(this);
+
+        btnForgotPass = findViewById(R.id.btnForgotPass);
+        btnForgotPass.setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -63,6 +68,9 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
                 Intent intent = new Intent(LogIn.this, Register.class);
 
                 startActivity(intent);
+                break;
+            case R.id.btnForgotPass:
+                forgotPassw(view);
                 break;
         }
     }
@@ -99,6 +107,31 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
                 }
 
             });
+        }
+    }
+
+    private void forgotPassw(View view) {
+
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
+        if ((userEmail.getText().toString().trim().matches(emailPattern) && userEmail.length() > 0)) {
+            mAuth.sendPasswordResetEmail(userEmail.getText().toString().trim())
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(LogIn.this,
+                                        "Password reset email has been sent to you", Toast.LENGTH_LONG).show();
+                            } else {
+
+                                Toast.makeText(LogIn.this, "Error!!! " +
+                                        task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    });
+        } else {
+
+            Toast.makeText(getApplicationContext(), "Please enter valid e-mail", Toast.LENGTH_LONG).show();
         }
     }
 
