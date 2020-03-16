@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Android_Project-Cookpad.iml" filepath="$PROJECT_DIR$/Android_Project-Cookpad.iml" group="Cookpad" />
+      <module fileurl="file://$PROJECT_DIR$/Cookpad.iml" filepath="$PROJECT_DIR$/Cookpad.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/Cookpad-app.iml" filepath="$PROJECT_DIR$/app/Cookpad-app.iml" group="Cookpad/app" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+    </modules>
+  </component>
+</project>
