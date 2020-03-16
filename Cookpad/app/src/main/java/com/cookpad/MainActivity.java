@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Recipe recipeB = new Recipe ("Beef Stew","Canadian");
         Recipe recipeC = new Recipe ("Waffles","Belgium");
         Recipe recipeD = new Recipe ("Buffalo chicken mozzarella sticks","American");
-        Recipe recipeE = new Recipe ("Punjabi chicken","Indian");
+        Recipe recipeE = new Recipe ("Butter chicken","Indian");
         Recipe recipeF = new Recipe ("Ghapama","Armenian");
         Recipe recipeG = new Recipe ("Kouign-Amann","French");
         Recipe recipeH = new Recipe ("Tacos","Mexican");

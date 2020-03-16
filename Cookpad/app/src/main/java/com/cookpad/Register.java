@@ -73,7 +73,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                 break;
             case  R.id.btnCancel:
 
-                Intent backToLogin = new Intent(this, MainActivity.class);
+                Intent backToLogin = new Intent(this, LogIn.class);
 
                 startActivity(backToLogin);
                 break;

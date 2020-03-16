@@ -16,14 +16,15 @@
         android:id="@+id/btnGoToFavorites"
         android:orderInCategory="102"
         app:showAsAction="always"
-        android:icon="@drawable/star"
+        android:icon="@drawable/fav_icon"
         android:iconTint="@color/white"
         />
     <item
+        android:title="Account"
         android:id="@+id/btnGoToAccount"
         android:icon="@drawable/iconaccount"
         android:orderInCategory="103"
-        android:title="Account"
+
         app:showAsAction="ifRoom"
 
         />

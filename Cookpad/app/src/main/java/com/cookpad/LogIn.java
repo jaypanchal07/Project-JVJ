@@ -20,7 +20,12 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
     private EditText userEmail, userPassword;
     private Button btnLogin, btnRegister;
 
+    // TODO: 2020-03-16 Vako will implement the forgot password 
+
+    
+
     FirebaseAuth mAuth;
+    // TODO: 2020-03-16 implement onAuthStateListener 
 
     private void initialize() {
 
