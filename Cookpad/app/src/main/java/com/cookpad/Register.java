@@ -115,7 +115,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
                     } else {
 
 
-                        Toast.makeText(Register.this, "Erreor!!! " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(Register.this, "Error!!! " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
 
                     }
                 }

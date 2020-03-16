@@ -94,7 +94,7 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
                         userPassword.setText(null);
                     } else {
 
-                        Toast.makeText(LogIn.this, "Erreor!!! " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(LogIn.this, "Error!!! " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                     }
                 }
 

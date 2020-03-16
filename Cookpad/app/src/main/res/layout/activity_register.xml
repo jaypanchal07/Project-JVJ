@@ -12,7 +12,7 @@
         android:id="@+id/constraintLayoutPart1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.8"
+        app:layout_constraintHeight_percent="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" >
 
@@ -90,7 +90,7 @@
         android:id="@+id/constraintLayoutPart2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintHeight_percent="0.3"
         app:layout_constraintTop_toBottomOf="@id/constraintLayoutPart1"
         app:layout_constraintStart_toStartOf="@id/constraintLayoutPart1"
         >
