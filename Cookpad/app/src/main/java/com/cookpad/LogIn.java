@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,6 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class LogIn extends AppCompatActivity implements View.OnClickListener {
 
@@ -22,12 +24,8 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
     private Button btnLogin, btnRegister;
     private TextView btnForgotPass;
 
-    // TODO: 2020-03-16 Vako will implement the forgot password 
-
-    
-
     FirebaseAuth mAuth;
-    // TODO: 2020-03-16 implement onAuthStateListener 
+    // TODO: 2020-03-16 implement onAuthStateListener
 
     private void initialize() {
 
@@ -52,6 +50,23 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_log_in);
 
         initialize();
+
+        /* This will keep the user logged in by taking the user to the Account activity directly
+        without stopping at registration activity.
+        So the user will be logged in unless the user click on LogOut button which is in
+        Account Activity.
+         */
+
+//        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+//        if (user != null) {
+//            // User is signed in
+//            Intent i = new Intent(LogIn.this, AccountActivity.class);
+//            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//            startActivity(i);
+//        } else {
+//            // User is signed out
+//            Log.d("TAG", "onAuthStateChanged: Signed_Out");
+//        }
     }
 
     @Override
@@ -107,6 +122,9 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
                 }
 
             });
+        } else {
+
+            Toast.makeText(LogIn.this, "Enter correct e-mail or password.", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -134,5 +152,4 @@ public class LogIn extends AppCompatActivity implements View.OnClickListener {
             Toast.makeText(getApplicationContext(), "Please enter valid e-mail", Toast.LENGTH_LONG).show();
         }
     }
-
 }
