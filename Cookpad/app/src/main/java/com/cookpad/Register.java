@@ -24,6 +24,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
     private FirebaseAuth mAuth;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -126,4 +127,5 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
             Toast.makeText(getApplicationContext(), "Please enter valid credentials", Toast.LENGTH_LONG).show();
         }
     }
+
 }
