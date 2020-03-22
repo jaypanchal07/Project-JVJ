@@ -3,6 +3,7 @@
     <blacklists>
       <blacklist language="Java">
         <added pattern="android.widget.SimpleAdapter.SimpleAdapter(context,data,resource,from,to)" />
+        <added pattern="com.android.volley.toolbox.JsonObjectRequest.JsonObjectRequest(method,url,jsonRequest,listener,errorListener)" />
       </blacklist>
     </blacklists>
   </component>
