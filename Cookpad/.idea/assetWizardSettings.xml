@@ -100,6 +100,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+                                                <entry key="scalingPercent" value="92" />
                                                 <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
@@ -111,7 +112,7 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="foregroundImage" value="$USER_HOME$/Downloads/cookpadicon.png" />
+                                      <entry key="foregroundImage" value="$PROJECT_DIR$/../../../CollegeLessons/ INTRODUCTION TO MOBILE DEVELOPMENT FOR ANDROID/Projects/CookPad_V1/app/src/main/res/drawable/cooclogogreen.png" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -159,11 +160,6 @@
                                 </PersistentState>
                               </value>
                             </entry>
-                          </map>
-                        </option>
-                        <option name="values">
-                          <map>
-                            <entry key="outputIconType" value="ACTIONBAR" />
                           </map>
                         </option>
                       </PersistentState>

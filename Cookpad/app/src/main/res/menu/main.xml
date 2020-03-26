@@ -24,9 +24,7 @@
         android:id="@+id/btnGoToAccount"
         android:icon="@drawable/iconaccount"
         android:orderInCategory="103"
-
         app:showAsAction="ifRoom"
-
         />
 
 </menu>
